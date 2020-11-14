@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script src="./popper.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script src="./jqcurd.js"></script>
+    
+
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./jqstyles.css">
+    
+
+</head>
+<body class = "container">
+    <h1>Recepies API Client</h1>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" class="form-control" placeholder="Title" aria-describedby="helpId">
+      <small id="TitleHelp" class="text-muted">Enter Title</small>
+      <div class="form-group">
+        <label for="body">Body</label>
+        <input type="text" name="body" id="body" class="form-control" placeholder="body details" aria-describedby="helpId">
+        <small id="bodyhelp" class="text-muted">enter details</small>
+      </div>
+    </div>
+    <button id="addBtn" class="btn btn-info">Add Recipe</button>
+    <div id="recipes">
+        Loading ....
+
+    </div>
+    
+    
+    <!-- Modal -->
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update Record</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="id"> <br>
+                    <input type="text" id="updatetitle"> <br>
+                    <input type="text" id="updatebody"> <br>
+                </div>
+                <div class="modal-footer">
+                    <button id="updatesave" class="btn btn-primary">Save Button</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
